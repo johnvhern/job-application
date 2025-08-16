@@ -179,6 +179,7 @@ section {
   background-size: cover;
   background-repeat: no-repeat;
   height: 500px;
+  background-position: 0% 60%;
   border-radius: 20px;
 }
 
