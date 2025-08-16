@@ -175,7 +175,7 @@ section {
 
 .listing-bg-container {
   margin-top: 2rem;
-  background-image: url(assets/listing-bg.jpg);
+  background-image: url(/assets/listing-bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   height: 500px;
@@ -213,7 +213,7 @@ section {
   border-radius: 10px;
   padding: 1rem;
   appearance: none;
-  background: url(assets/chevron-down.svg);
+  background: url(/assets/chevron-down.svg);
   background-repeat: no-repeat;
   background-position: 97%;
   background-size: 20px;
@@ -358,7 +358,7 @@ section {
 }
 
 .card-1 {
-  background: url(assets/card-img-1.png);
+  background: url(/assets/card-img-1.png);
   background-size: cover;
   position: relative;
 }
@@ -373,7 +373,7 @@ section {
 }
 
 .card-2 {
-  background: url(assets/card-img-2.png);
+  background: url(/assets/card-img-2.png);
   background-size: cover;
   position: relative;
 }
@@ -388,7 +388,7 @@ section {
 }
 
 .card-3 {
-  background: url(assets/card-img-3.png);
+  background: url(/assets/card-img-3.png);
   background-size: cover;
   position: relative;
 }
@@ -432,14 +432,14 @@ section {
 }
 
 .get-it-sold-img-1 {
-  background: url(assets/get-it-sold-1.webp);
+  background: url(/assets/get-it-sold-1.webp);
   height: 400px;
   background-size: cover;
   border-radius: 30px;
 }
 
 .get-it-sold-img-2 {
-  background: url(assets/get-it-sold-2.webp);
+  background: url(/assets/get-it-sold-2.webp);
   width: 600px;
   height: 300px;
   background-size: cover;
@@ -447,7 +447,7 @@ section {
 }
 
 .get-it-sold-img-3 {
-  background: url(assets/get-it-sold-3.webp);
+  background: url(/assets/get-it-sold-3.webp);
   width: 600px;
   height: 300px;
   background-size: cover;
@@ -803,7 +803,7 @@ section {
 
 .whatsapp-btn-container button {
   width: 50%;
-  background: url(assets/whatsapp.svg);
+  background: url(/assets/whatsapp.svg);
   background-size: 32px;
   background-color: var(--bg-accent);
   background-repeat: no-repeat;
