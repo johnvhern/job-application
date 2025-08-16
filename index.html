@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script src="/javascript/script.js" type="module" defer></script>
+    <title>Marci Metzger - Real Estate Agent</title>
+  </head>
+  <body>
+    <header>
+      <div class="nav-container">
+        <div class="logo">
+          <img src="assets/Logo.svg" alt="Marci Metzger Logo" />
+        </div>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about-us">About Us</a></li>
+            <li><a href="#listings">Listings</a></li>
+          </ul>
+        </nav>
+        <div class="cta-btn">
+          <button
+            type="button"
+            class="btn-contact-us"
+            onclick="location.href='#contact-page'"
+          >
+            Contact Us
+          </button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="hero section-container">
+        <div class="hero-container">
+          <div class="hero-content">
+            <p class="agent-name">MARCI METZER - THE RIDGE REALTY GROUP</p>
+            <h1>Pahrump Realtor</h1>
+            <p>
+              Nearly 30 years of experience delivering results you can trust
+            </p>
+          </div>
+          <div class="hero-btn-container">
+            <button
+              class="btn-contact-us find-dream-home"
+              onclick="location.href='#search-listings-page'"
+            >
+              Find Your Dream House
+            </button>
+          </div>
+          <div class="trusted-brands-container">
+            <p>Trusted by Local Brands & Global Brands</p>
+            <div class="brands-img-container">
+              <img
+                src="/assets/Brands.svg"
+                alt="Marci Mertzger Partner Brands"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="hero-img-container">
+          <img src="/assets/Marci.svg" alt="A Picture of Marci Metzger" />
+        </div>
+      </section>
+      <section
+        class="search-listings section-container"
+        id="search-listings-page"
+      >
+        <div class="search-listing-container">
+          <h2 class="section-titles">Search Listings</h2>
+          <div class="listing-bg-container">
+            <img class="bg-img" />
+          </div>
+          <form action="/search-results" class="search-form" method="GET">
+            <div class="top-field">
+              <div class="field">
+                <div class="label">
+                  <label for="location">Location</label>
+                </div>
+                <select id="location" name="location"></select>
+              </div>
+              <div class="field">
+                <div class="label">
+                  <label for="type">Type</label>
+                </div>
+                <select id="type" name="type"></select>
+              </div>
+              <div class="field">
+                <div class="label">
+                  <label for="sort-by">Sort By</label>
+                </div>
+                <select id="sort-by" name="sort-by">
+                  <option value="newest">Newest</option>
+                  <option value="oldest">Oldest</option>
+                  <option value="least-to-most">Least Expensive to Most</option>
+                  <option value="most-to-least">Most Expensive to Least</option>
+                  <option value="beds-low-to-high">
+                    Bedrooms (Low to High)
+                  </option>
+                  <option value="beds-high-to-low">
+                    Bedrooms (High to Low)
+                  </option>
+                  <option value="baths-low-to-high">
+                    Bathrooms (Low to High)
+                  </option>
+                  <option value="baths-high-to-low">
+                    Bathrooms (High to Low)
+                  </option>
+                </select>
+              </div>
+            </div>
+            <div class="bottom-field">
+              <div class="two-fields">
+                <div class="bedrooms">
+                  <div class="label">
+                    <label for="bedrooms">Bedrooms</label>
+                  </div>
+                  <select id="bedrooms" name="bedrooms">
+                    <option value="" selected>Any Number</option>
+                    <option value="1+">1+</option>
+                    <option value="2+">2+</option>
+                    <option value="3+">3+</option>
+                    <option value="4+">4+</option>
+                    <option value="5+">5+</option>
+                    <option value="6+">6+</option>
+                  </select>
+                </div>
+                <div class="baths">
+                  <div class="la"><label for="baths">Baths</label></div>
+                  <select name="baths" id="baths">
+                    <option value="" selected>Any Number</option>
+                    <option value="1+">1+</option>
+                    <option value="2+">2+</option>
+                    <option value="3+">3+</option>
+                    <option value="4+">4+</option>
+                    <option value="5+">5+</option>
+                    <option value="6+">6+</option>
+                  </select>
+                </div>
+              </div>
+              <div class="two-fields">
+                <div class="min-price">
+                  <div class="label">
+                    <label for="min-price">Min Price</label>
+                  </div>
+                  <input type="text" id="min-price" name="min-price" />
+                </div>
+                <div class="baths">
+                  <div class="la">
+                    <label for="max-price">Max Price</label>
+                  </div>
+                  <input type="text" name="max-price" id="max-price" />
+                </div>
+              </div>
+              <div class="btn-search-listings-container">
+                <button type="button" class="btn-search-listings">
+                  Search Now
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+      <section class="about section-container">
+        <div class="about-container">
+          <div class="about-img-container">
+            <img src="/assets/about-img.svg" alt="Marci Metzger About Image" />
+          </div>
+          <div class="about-content">
+            <div class="about-title">
+              <h2 class="section-titles">About Me</h2>
+            </div>
+            <div class="name">
+              <p>Marci J Metzger</p>
+            </div>
+            <div class="content">
+              <p>
+                Marci was a REALTOR, then licensed Broker, in Washington State.
+                Now, she is enjoying the sunshine, and helping clients in
+                Southern Nevada. Having helped buyers and sellers in many
+                markets since 1995, she is a wealth of knowledge.
+              </p>
+              <p>
+                "I love that small-town feeling that our community offers.
+                Spectacular golf courses, parks, pool, and easy access to Las
+                Vegas make Pahrump a great place to call home. Working or
+                retired, fast-paced or looking to relax... there's a place for
+                you here! I enjoy living in the Mountain Falls community and
+                will strive to find you a home that will suit you just as this
+                community does me."
+              </p>
+            </div>
+            <div class="credentials-container">
+              <div class="credential">
+                <p>29+</p>
+                <p>Years of Experience</p>
+              </div>
+              <div class="credential">
+                <p>500+</p>
+                <p>Satisfied Clients</p>
+              </div>
+              <div class="credential">
+                <p>10</p>
+                <p>Locations Covered</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="services section-container">
+        <div class="services-container">
+          <div class="services-title">
+            <h2 class="section-titles">Our Services</h2>
+          </div>
+          <div class="cards-container">
+            <div class="card card-1">
+              <div class="card-content">
+                <div class="title"><p>Real Estate Done Right</p></div>
+                <p class="card-text">
+                  Whether you’re buying, selling, or investing, we make your
+                  property journey as smooth and stress-free as possible. Our
+                  team handles the details, keeps you informed, and ensures that
+                  every step is tailored to your needs and goals.
+                </p>
+              </div>
+            </div>
+            <div class="card card-2">
+              <div class="card-content">
+                <div class="title"><p>Commercial & Residential</p></div>
+                <p class="card-text">
+                  From cozy starter homes to luxury estates, and even commercial
+                  spaces, we’ll help you find the perfect fit. We live, work,
+                  and play in this community—so we know the neighborhoods,
+                  market trends, and opportunities that will match your
+                  lifestyle and budget.
+                </p>
+              </div>
+            </div>
+            <div class="card card-3">
+              <div class="card-content">
+                <div class="title"><p>Rely on Expertise</p></div>
+                <p class="card-text">
+                  Navigating affordability, loans, and credit options can be
+                  overwhelming—but you’re never alone. We connect you with
+                  trusted lenders, provide clear market insights, and guide you
+                  through every decision so you can move forward with confidence
+                  and peace of mind.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="get-it-sold section-container">
+        <div class="get-it-sold-container">
+          <div class="get-it-sold-title">
+            <p class="section-titles">Get it Sold</p>
+          </div>
+          <div class="get-it-sold-card-container">
+            <div class="get-sold-card-1">
+              <div class="get-it-sold-img-1"></div>
+              <div class="get-it-sold-card-content">
+                <div class="get-it-sold-card-title">
+                  <p>Top Residential Sales – Last 5 Years</p>
+                </div>
+                <div class="get-it-sold-text">
+                  <ul>
+                    <li>Helped 90 clients in 2021</li>
+                    <li>$28.5 million in total sales that year alone</li>
+                  </ul>
+                  <p>
+                    We continually grow, learn, and refine our strategies to
+                    excel in the market. Every year, our goal is to make our
+                    “best” even better because our clients deserve nothing less.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="get-sold-stacked-card-container">
+              <div class="get-sold-card-2">
+                <div class="get-it-sold-img-2"></div>
+                <div class="get-it-sold-card-content">
+                  <div class="get-it-sold-card-title">
+                    <p>Don’t Just List it — Get it SOLD!</p>
+                  </div>
+                  <div class="get-it-sold-text two-stacked-card-text">
+                    <p>
+                      We go beyond the basics, using every marketing channel and
+                      buyer network to put your listing in front of the right
+                      audience. The result? Top dollar for your home.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="get-sold-card-3">
+                <div class="get-it-sold-img-3"></div>
+                <div class="get-it-sold-card-content">
+                  <div class="get-it-sold-card-title">
+                    <p>Your Guide to Buying with Confidence</p>
+                  </div>
+                  <div class="get-it-sold-text two-stacked-card-text">
+                    <p>
+                      Nobody knows the market like we do. From market analysis
+                      to upgrade recommendations, trusted contractors, and
+                      insider tips, we’re with you every step of the way.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="photo-gallery section-container">
+        <div class="title"><h2 class="section-titles">Photo Gallery</h2></div>
+        <div class="photo-gallery-container">
+          <div class="gallery">
+            <div class="slides">
+              <div class="slide">
+                <img src="/assets/1.webp" alt="Slide 1" />
+                <div class="caption">1BR Modern Condo – $150k</div>
+              </div>
+              <div class="slide">
+                <img src="/assets/2.webp" alt="Slide 2" />
+                <div class="caption">2BR Modern Condo – $250k</div>
+              </div>
+              <div class="slide">
+                <img src="/assets/3.webp" alt="Slide 3" />
+                <div class="caption">3BR Modern Condo – $350k</div>
+              </div>
+              <div class="slide">
+                <img src="/assets/4.webp" alt="Slide 4" />
+                <div class="caption">4BR Modern Condo – $450k</div>
+              </div>
+              <div class="slide">
+                <img src="/assets/5.webp" alt="Slide 5" />
+                <div class="caption">5BR Modern Condo – $550k</div>
+              </div>
+              <div class="slide">
+                <img src="/assets/6.webp" alt="Slide 6" />
+                <div class="caption">6BR Modern Condo – $650k</div>
+              </div>
+              <div class="slide">
+                <img src="/assets/7.webp" alt="Slide 7" />
+                <div class="caption">7BR Modern Condo – $750k</div>
+              </div>
+            </div>
+
+            <!-- Controls -->
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+
+            <!-- Indicators -->
+            <div class="indicators">
+              <span class="dot active"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="testimonials section-container">
+        <div class="testimonials-container">
+          <div class="testimonial-title">
+            <h2 class="section-titles">Our Client Says</h2>
+          </div>
+          <div class="testimonial-card-container">
+            <div class="testimonal-card">
+              <div class="pic-container">
+                <div class="client-img">
+                  <img src="/assets/client1.jpg" alt="" />
+                </div>
+              </div>
+              <div class="seperator"></div>
+              <div class="client-name">
+                <p>Robert Martinez</p>
+                <p>CEO of Apple</p>
+              </div>
+              <div class="client-text">
+                <p>
+                  "We couldn't be happier with Marci's service. She sold our
+                  home in just two weeks and got us above asking price. Her
+                  marketing strategy and professional network are truly
+                  impressive."
+                </p>
+              </div>
+            </div>
+            <div class="testimonal-card">
+              <div class="pic-container">
+                <div class="client-img">
+                  <img src="/assets/client2.jpg" alt="" />
+                </div>
+              </div>
+              <div class="seperator"></div>
+              <div class="client-name">
+                <p>Michael Johnson</p>
+                <p>CEO of Google</p>
+              </div>
+              <div class="client-text">
+                <p>
+                  "Marci's expertise and dedication made our home buying process
+                  incredibly smooth. Her knowledge of the Pahrump market is
+                  unmatched, and she went above and beyond to find us the
+                  perfect property."
+                </p>
+              </div>
+            </div>
+            <div class="testimonal-card">
+              <div class="pic-container">
+                <div class="client-img">
+                  <img src="/assets/client3.jpg" alt="" />
+                </div>
+              </div>
+              <div class="seperator"></div>
+              <div class="client-name">
+                <p>David Chen</p>
+                <p>CEO of Microsoft</p>
+              </div>
+              <div class="client-text">
+                <p>
+                  "As first-time homebuyers, we were nervous about the process.
+                  Marci guided us every step of the way, explaining everything
+                  clearly and ensuring we felt confident in our decisions."
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="view-all-testimonails-btn-container">
+            <button type="button" class="btn-view-testimonials btn-contact-us">
+              View All
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="contact section-container" id="contact-page">
+        <div class="contact-container">
+          <div class="contact-title">
+            <h2 class="section-titles">Let's Connect</h2>
+            <p>Reach out for questions, listings, or to book a showing.</p>
+          </div>
+          <div class="contact-content">
+            <div class="form-container">
+              <div class="form-title"><p>Send a message</p></div>
+              <form action="POST" class="contact-form">
+                <label for="name">Name</label><br />
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="e.g. Juan Dela Cruz"
+                />
+                <br />
+                <label for="email">Email</label> <br />
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="e.g. example@example.com"
+                  required
+                />
+                <br />
+                <label for="message">Message</label> <br />
+                <textarea
+                  name="message"
+                  id="message"
+                  rows="10"
+                  cols="80"
+                ></textarea>
+                <div class="btn-submit-container">
+                  <button type="button" class="btn-contact-us">Send</button>
+                </div>
+              </form>
+            </div>
+            <div class="address-container">
+              <div class="whatsapp-btn-container">
+                <button type="button" class="btn-contact-us">WhatsApp</button>
+              </div>
+              <div class="address">
+                <p>Marci Metzger - THE RIDGE REALTY GROUP</p>
+                <address>
+                  <div class="location">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="#2b77ad"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-map-pin-icon lucide-map-pin"
+                    >
+                      <path
+                        d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"
+                      />
+                      <circle cx="12" cy="10" r="3" />
+                    </svg>
+                    <p>
+                      <a
+                        href="https://www.google.com/maps?daddr=3190+HW-160,+Suite+F,+Pahrump,+Nevada+89048,+United+States"
+                        target="_blank"
+                        >3190 HW-160, Suite F, Pahrump, Nevada 89048, United
+                        States</a
+                      >
+                    </p>
+                  </div>
+                  <div class="telephone">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="#2b77ad"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-phone-icon lucide-phone"
+                    >
+                      <path
+                        d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"
+                      />
+                    </svg>
+                    <p><a href="tel:2069196886">(206) 919-6886</a></p>
+                  </div>
+                </address>
+              </div>
+              <div class="office-hours">
+                <p>Office Hours</p>
+                <p>Open Daily: 8:00 AM - 7:00 PM</p>
+                <p>
+                  Appointments outside office hours available upon request. Just
+                  call!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="social-icons">
+        <div class="icons-container">
+          <a href="https://www.facebook.com/MarciHomes/" target="_blank"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              viewBox="0 0 32 32"
+            >
+              <path
+                d="M16,2c-7.732,0-14,6.268-14,14,0,6.566,4.52,12.075,10.618,13.588v-9.31h-2.887v-4.278h2.887v-1.843c0-4.765,2.156-6.974,6.835-6.974,.887,0,2.417,.174,3.043,.348v3.878c-.33-.035-.904-.052-1.617-.052-2.296,0-3.183,.87-3.183,3.13v1.513h4.573l-.786,4.278h-3.787v9.619c6.932-.837,12.304-6.74,12.304-13.897,0-7.732-6.268-14-14-14Z"
+              ></path></svg
+          ></a>
+          <a
+            href="https://www.instagram.com/marciandlauren_nvrealtors/"
+            target="_blank"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              viewBox="0 0 32 32"
+            >
+              <path
+                d="M10.202,2.098c-1.49,.07-2.507,.308-3.396,.657-.92,.359-1.7,.84-2.477,1.619-.776,.779-1.254,1.56-1.61,2.481-.345,.891-.578,1.909-.644,3.4-.066,1.49-.08,1.97-.073,5.771s.024,4.278,.096,5.772c.071,1.489,.308,2.506,.657,3.396,.359,.92,.84,1.7,1.619,2.477,.779,.776,1.559,1.253,2.483,1.61,.89,.344,1.909,.579,3.399,.644,1.49,.065,1.97,.08,5.771,.073,3.801-.007,4.279-.024,5.773-.095s2.505-.309,3.395-.657c.92-.36,1.701-.84,2.477-1.62s1.254-1.561,1.609-2.483c.345-.89,.579-1.909,.644-3.398,.065-1.494,.081-1.971,.073-5.773s-.024-4.278-.095-5.771-.308-2.507-.657-3.397c-.36-.92-.84-1.7-1.619-2.477s-1.561-1.254-2.483-1.609c-.891-.345-1.909-.58-3.399-.644s-1.97-.081-5.772-.074-4.278,.024-5.771,.096m.164,25.309c-1.365-.059-2.106-.286-2.6-.476-.654-.252-1.12-.557-1.612-1.044s-.795-.955-1.05-1.608c-.192-.494-.423-1.234-.487-2.599-.069-1.475-.084-1.918-.092-5.656s.006-4.18,.071-5.656c.058-1.364,.286-2.106,.476-2.6,.252-.655,.556-1.12,1.044-1.612s.955-.795,1.608-1.05c.493-.193,1.234-.422,2.598-.487,1.476-.07,1.919-.084,5.656-.092,3.737-.008,4.181,.006,5.658,.071,1.364,.059,2.106,.285,2.599,.476,.654,.252,1.12,.555,1.612,1.044s.795,.954,1.051,1.609c.193,.492,.422,1.232,.486,2.597,.07,1.476,.086,1.919,.093,5.656,.007,3.737-.006,4.181-.071,5.656-.06,1.365-.286,2.106-.476,2.601-.252,.654-.556,1.12-1.045,1.612s-.955,.795-1.608,1.05c-.493,.192-1.234,.422-2.597,.487-1.476,.069-1.919,.084-5.657,.092s-4.18-.007-5.656-.071M21.779,8.517c.002,.928,.755,1.679,1.683,1.677s1.679-.755,1.677-1.683c-.002-.928-.755-1.679-1.683-1.677,0,0,0,0,0,0-.928,.002-1.678,.755-1.677,1.683m-12.967,7.496c.008,3.97,3.232,7.182,7.202,7.174s7.183-3.232,7.176-7.202c-.008-3.97-3.233-7.183-7.203-7.175s-7.182,3.233-7.174,7.203m2.522-.005c-.005-2.577,2.08-4.671,4.658-4.676,2.577-.005,4.671,2.08,4.676,4.658,.005,2.577-2.08,4.671-4.658,4.676-2.577,.005-4.671-2.079-4.676-4.656h0"
+              ></path></svg
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/marci-metzger-30642496/"
+            target="_blank"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              viewBox="0 0 32 32"
+            >
+              <path
+                d="M26.111,3H5.889c-1.595,0-2.889,1.293-2.889,2.889V26.111c0,1.595,1.293,2.889,2.889,2.889H26.111c1.595,0,2.889-1.293,2.889-2.889V5.889c0-1.595-1.293-2.889-2.889-2.889ZM10.861,25.389h-3.877V12.87h3.877v12.519Zm-1.957-14.158c-1.267,0-2.293-1.034-2.293-2.31s1.026-2.31,2.293-2.31,2.292,1.034,2.292,2.31-1.026,2.31-2.292,2.31Zm16.485,14.158h-3.858v-6.571c0-1.802-.685-2.809-2.111-2.809-1.551,0-2.362,1.048-2.362,2.809v6.571h-3.718V12.87h3.718v1.686s1.118-2.069,3.775-2.069,4.556,1.621,4.556,4.975v7.926Z"
+                fill-rule="evenodd"
+              ></path></svg
+          ></a>
+          <a
+            href="https://www.yelp.com/biz/marci-metzger-the-ridge-realty-pahrump"
+            target="_blank"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              viewBox="0 0 32 32"
+            >
+              <path
+                d="M11.876,19.928l1.381-.319c.029-.007,.077-.018,.136-.037,.381-.102,.708-.349,.911-.688,.203-.339,.267-.743,.179-1.128-.002-.008-.004-.016-.006-.025-.045-.184-.125-.359-.234-.514-.155-.196-.346-.361-.564-.484-.256-.146-.524-.27-.801-.371l-1.515-.553c-.85-.316-1.7-.624-2.558-.925-.556-.198-1.028-.372-1.437-.498-.077-.024-.163-.048-.232-.072-.495-.152-.843-.215-1.138-.217-.197-.007-.393,.029-.574,.105-.189,.082-.359,.202-.499,.354-.069,.079-.135,.161-.195,.247-.057,.087-.109,.178-.157,.271-.052,.1-.097,.203-.134,.309-.281,.831-.421,1.703-.414,2.58,.005,.793,.026,1.811,.462,2.501,.105,.177,.246,.33,.414,.449,.31,.214,.624,.243,.951,.266,.488,.035,.96-.085,1.432-.194l4.589-1.06h.004Z"
+              ></path>
+              <path
+                d="M27.288,12.594c-.377-.792-.884-1.514-1.5-2.138-.08-.079-.165-.152-.255-.219-.083-.063-.17-.121-.26-.174-.092-.05-.187-.096-.284-.136-.192-.075-.397-.109-.602-.1-.197,.011-.388,.065-.562,.158-.263,.131-.548,.341-.928,.694-.052,.052-.118,.111-.177,.166-.313,.294-.661,.657-1.075,1.079-.64,.647-1.27,1.297-1.896,1.954l-1.12,1.162c-.205,.212-.392,.442-.558,.685-.142,.206-.242,.438-.295,.682-.031,.187-.026,.379,.013,.565,.002,.008,.004,.016,.006,.025,.088,.385,.323,.72,.653,.935,.331,.215,.732,.294,1.12,.219,.061-.009,.109-.019,.138-.027l5.973-1.38c.471-.109,.948-.208,1.371-.454,.284-.164,.553-.328,.738-.656,.099-.181,.159-.38,.176-.585,.092-.814-.333-1.738-.675-2.454Z"
+              ></path>
+              <path
+                d="M16.598,15.106c.433-.544,.432-1.354,.47-2.017,.13-2.214,.267-4.428,.376-6.643,.042-.839,.132-1.667,.082-2.512-.041-.697-.046-1.498-.486-2.07-.777-1.009-2.435-.926-3.565-.77-.346,.048-.693,.113-1.038,.195s-.685,.173-1.018,.28c-1.085,.355-2.61,1.008-2.869,2.258-.146,.707,.199,1.43,.467,2.075,.324,.782,.768,1.486,1.172,2.222,1.068,1.943,2.156,3.874,3.24,5.807,.324,.577,.677,1.308,1.304,1.607,.041,.018,.084,.034,.127,.048,.281,.106,.587,.127,.88,.059,.018-.004,.035-.008,.052-.012,.27-.074,.515-.221,.707-.425,.035-.033,.068-.067,.099-.103Z"
+              ></path>
+              <path
+                d="M16.079,21.033c-.169-.238-.409-.416-.685-.509-.276-.093-.575-.096-.853-.009-.065,.022-.129,.048-.191,.079-.095,.048-.186,.105-.271,.169-.249,.184-.459,.424-.649,.664-.048,.061-.093,.143-.15,.195l-.961,1.321c-.545,.74-1.082,1.483-1.614,2.237-.347,.487-.648,.898-.885,1.261-.045,.069-.092,.145-.135,.206-.285,.44-.446,.761-.528,1.048-.062,.19-.082,.392-.058,.59,.026,.207,.096,.406,.204,.584,.058,.089,.12,.176,.186,.259,.069,.08,.142,.156,.219,.228,.082,.079,.17,.151,.264,.216,.663,.461,1.389,.793,2.153,1.049,.635,.211,1.296,.337,1.964,.375,.114,.006,.228,.003,.341-.007,.105-.009,.21-.024,.313-.044,.104-.024,.206-.054,.306-.089,.195-.073,.373-.186,.522-.332,.141-.141,.249-.311,.318-.498,.111-.277,.184-.628,.232-1.15,.004-.074,.015-.163,.022-.245,.038-.433,.055-.942,.083-1.539,.047-.92,.084-1.835,.113-2.753,0,0,.062-1.632,.062-1.632,.014-.376,.003-.793-.102-1.167-.046-.179-.12-.35-.219-.507h0Z"
+              ></path>
+              <path
+                d="M26.924,23.587c-.2-.22-.485-.439-.933-.71-.065-.036-.14-.084-.21-.126-.373-.224-.823-.46-1.348-.746-.807-.443-1.614-.875-2.428-1.303l-1.44-.763c-.075-.022-.15-.076-.221-.11-.277-.132-.57-.256-.874-.312-.105-.02-.211-.031-.318-.033-.069,0-.138,.003-.206,.012-.288,.045-.554,.179-.761,.384-.207,.205-.344,.47-.392,.758-.022,.183-.015,.368,.02,.549,.07,.383,.241,.762,.418,1.094l.769,1.441c.428,.813,.861,1.62,1.304,2.426,.286,.525,.525,.975,.748,1.347,.042,.07,.09,.146,.126,.21,.272,.448,.49,.73,.711,.932,.143,.138,.315,.244,.503,.309,.198,.066,.407,.089,.615,.068,.105-.012,.21-.031,.314-.054,.102-.027,.203-.06,.301-.098,.106-.04,.21-.088,.31-.143,.584-.328,1.123-.731,1.602-1.199,.575-.565,1.082-1.182,1.477-1.888,.055-.1,.102-.204,.142-.31,.037-.099,.069-.199,.096-.301,.023-.104,.041-.209,.054-.314,.02-.207-.004-.416-.071-.614-.065-.189-.171-.362-.31-.505h0Z"
+              ></path></svg
+          ></a>
+        </div>
+      </div>
+      <p>Copyright &copy; 2023 Marci Metzger Homes - All Rights Reserved</p>
+    </footer>
+  </body>
+</html>
